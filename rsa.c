@@ -23,7 +23,7 @@ void task1(BIGNUM *p , BIGNUM *q , BIGNUM *e, BIGNUM *d, BN_CTX *ctx, BIGNUM * o
     // phi(n) = (p-1)*(q-1)
     BN_mul(phi, pSubOne, qSUbOne , ctx);    
     
-    // d : e.d = 1 (mod n)
+    // d : e.d = 1 (mod phi)
 
     BN_mod_inverse(d, e,phi,ctx);
 
