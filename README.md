@@ -18,14 +18,14 @@ cp env-example .env
 pip install -r requiremnents.txt 
 ```
 
-========= GET  .ENV vALUE ====================== 
+========= GET  .ENV VALUE ====================== 
 
     Step 1: Get certificates
 
         Run:
-```
+        ```
         openssl s_client -connect portal.ptit.edu.vn:443 -showcerts
-```
+        ```
         Save certificates
         Server certificate → c0.pem
 
@@ -58,7 +58,7 @@ pip install -r requiremnents.txt
     Step 3: Get signature from server certificate
         ```
         openssl x509 -in c0.pem -text -noout
-```
+        ```
         Find:
 
         Signature Value:
@@ -71,28 +71,28 @@ pip install -r requiremnents.txt
         ab:cd:12 → abcd12
 
         Save to file:
-    ```
+        ```
         cat signature.txt | tr -d ':\n ' > sig_clean.txt
-    ```
+        ```
     Step 4: Extract certificate body
-    ```
+        ```
         openssl asn1parse -i -in c0.pem
-```
+        ```
         Find line:
 
         4:d=1 ...
         Extract body
         ```
-openssl asn1parse -i -in c0.pem -strparse 4 -out c0_body.bin -noout
-```
+        openssl asn1parse -i -in c0.pem -strparse 4 -out c0_body.bin -noout
+        ```
         Step 5: Hash the body
         ```
-sha256sum c0_body.bin
-```
+        sha256sum c0_body.bin
+        ```
         This is the hash used by CA.
 
 
 RUN : 
 ```
-python task6.txt
+python task6.py
 ```
