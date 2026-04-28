@@ -20,7 +20,7 @@ pip install -r requiremnents.txt
 
 ========= GET  .ENV VALUE ====================== 
 
-    Step 1: Get certificates
+STEP 1: Get certificates
 
 Run:
 ```
@@ -43,7 +43,7 @@ CA certificate → c1.pem
 Second certificate:
 
 1 s:CN = GlobalSign GCC R6 AlphaSSL CA 2023
-    Step 2: Get public key from CA
+STEP 2: Get public key from CA
 Get modulus (n)
 ```
         openssl x509 -in c1.pem -noout -modulus
@@ -55,7 +55,7 @@ Get exponent (e)
 Find:
 
 Exponent: 65537
-    Step 3: Get signature from server certificate
+STEP 3: Get signature from server certificate
 ```
         openssl x509 -in c0.pem -text -noout
 ```
@@ -74,7 +74,7 @@ Save to file:
 ```
         cat signature.txt | tr -d ':\n ' > sig_clean.txt
 ```
-    Step 4: Extract certificate body
+STEP 4: Extract certificate body
 ```
         openssl asn1parse -i -in c0.pem
 ```
@@ -85,7 +85,7 @@ Extract body
 ```
 openssl asn1parse -i -in c0.pem -strparse 4 -out c0_body.bin -noout
 ```
-     Step 5: Hash the body
+STEP 5: Hash the body
 ```
         sha256sum c0_body.bin
 ```
