@@ -1,0 +1,6 @@
+===== TASK 5: FAKE CA MITM =====
+subject=C=VN, ST=Hanoi, L=Hanoi, O=Hacker, OU=Fake Web, CN=ptit.com, emailAddress=hacker@gmail.com
+issuer=C=VN, ST=Hanoi, L=Hanoi, O=Fake Hacker CA, OU=MITM Lab, CN=Fake Hacker Root CA, emailAddress=fakeca@gmail.com
+
+Expected browser result:
+Firefox warns because issuer is Fake Hacker Root CA and it is not trusted.

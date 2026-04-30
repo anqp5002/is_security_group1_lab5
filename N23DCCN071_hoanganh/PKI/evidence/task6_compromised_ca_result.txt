@@ -1,0 +1,8 @@
+===== TASK 6: COMPROMISED CA =====
+serial=ABCD
+subject=C=VN, ST=Hanoi, L=Hanoi, O=Hacker, OU=Compromised CA Lab, CN=hacker.com, emailAddress=hacker6@gmail.com
+issuer=C=VN, ST=Hanoi, L=Hanoi, O=PTIT, OU=ATTT, CN=PTIT Root CA, emailAddress=ptit@gmail.com
+/home/hoanganh/compromised-ca-lab/hacker6.crt: OK
+
+Expected browser result:
+Firefox does not warn because the certificate is signed by the trusted CA.
