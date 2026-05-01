@@ -1,0 +1,8 @@
+# Cryptography Toolkit - Lab 5
+# Requirements for all modules
+
+# Symmetric Encryption (AES / 3DES)
+pycryptodome==3.23.0
+
+# RSA - Certificate Verification (Task 6)
+python-dotenv>=1.0.0
