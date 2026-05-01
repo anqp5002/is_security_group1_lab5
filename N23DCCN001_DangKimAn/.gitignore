@@ -1,0 +1,22 @@
+output.exe
+ignore/
+.env
+
+# Python
+__pycache__/
+*.pyc
+.venv/
+venv/
+env/
+
+# IDE
+.vscode/
+.idea/
+
+# Sensitive PKI private files
+*.key
+*.pem
+demoCA/
+
+# OS
+.DS_Store
