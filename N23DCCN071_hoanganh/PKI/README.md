@@ -27,7 +27,10 @@ PKI/
 - task5_hacker_lab/
 - task6_compromised_ca_lab/
 - evidence/
-
+- apache_configs/
+	- pki-task4.conf: Apache HTTPS config cho ptit.com dùng CA thật.
+	- pki-task5.conf: Apache HTTPS config cho ptit.com dùng Fake Hacker Root CA.
+	- pki-task6.conf: Apache HTTPS config cho hacker.com dùng CA thật bị compromise.
 ## task1_4_pki_lab
 
 Thư mục này chứa các file liên quan đến Task 1 đến Task 4.
