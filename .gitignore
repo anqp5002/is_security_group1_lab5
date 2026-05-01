@@ -1,6 +1,7 @@
 output.exe
 ignore/
 .env
+
 # Python
 __pycache__/
 *.pyc
