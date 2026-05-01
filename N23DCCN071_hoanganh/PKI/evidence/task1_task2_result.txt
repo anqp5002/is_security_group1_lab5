@@ -1,0 +1,8 @@
+===== TASK 1: ROOT CA =====
+subject=C=VN, ST=Hanoi, L=Hanoi, O=PTIT, OU=ATTT, CN=PTIT Root CA, emailAddress=ptit@gmail.com
+issuer=C=VN, ST=Hanoi, L=Hanoi, O=PTIT, OU=ATTT, CN=PTIT Root CA, emailAddress=ptit@gmail.com
+
+===== TASK 2: CERTIFICATE FOR ptit.com =====
+subject=C=VN, ST=Hanoi, L=Hanoi, O=PTIT, OU=ATTT, CN=ptit.com, emailAddress=ptit@gmail.com
+issuer=C=VN, ST=Hanoi, L=Hanoi, O=PTIT, OU=ATTT, CN=PTIT Root CA, emailAddress=ptit@gmail.com
+/home/hoanganh/pki-lab/server.crt: OK
